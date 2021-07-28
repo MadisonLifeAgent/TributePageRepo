@@ -1,0 +1,150 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE HTML>
+
+<style>
+  #main {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 2% 2% 2% 2%;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 2%;
+    grid-padding: 5%;
+    grid-width: 100%;
+  }
+  
+  @media (min-width: 300px) {
+    #main{
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "header header header"
+        "content content content"
+        "content content content"
+        "footer footer footer";
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    #main{
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "header"
+        "content"
+        "content"
+        "footer";
+    }
+  }
+  
+  #title {
+    font-size: 40px;
+    padding: 20px 20px 20px 20px;
+    background-color: lightblue;
+    grid-area: 1 / 2 / span 1 / span 3;
+  }
+  
+  #title-text {
+    margin: 20px 20px 20px 20px;
+  }
+  
+  #img-div {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  
+  #image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 50px;
+  }
+  
+  #img-caption {
+    text-align: center;
+    background-color: lightgrey;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+  }
+  
+  #tribute-info {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+  
+  #tribute-title {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  #header {
+    text-align: center;
+    grid-area: 1 / 1 / span 1 / span 3;
+  }
+  #footer {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 4 / 2 / span 1 / span 1;
+  }
+  
+</style>
+
+<html>
+
+  <main id="main">
+    
+  <header id="header">
+    
+    <h1 id="title">Sir David Frederick Attenborough</h1>
+    
+    <p id="title-text">"I just wish the world was twice as big and half of it was still unexplored."</p>
+    
+  </header>
+    
+    <div id="img-div">
+      
+      <a href="https://www.gq-magazine.co.uk/fashion/article/david-attenborough-young"><img id="image" src="https://media.gq-magazine.co.uk/photos/5eb3f33e1578fa0ec3478b41/master/pass/20200507-David-Attenborough-04.jpg" alt="A younger David Attenborough in his own fashion style with a camera"></a>
+      
+      <p id="img-caption">Attenborough posing for GQ magazine in his trendsetting style.</p>
+      
+    </div>
+    
+    <div id="tribute-info">
+      
+      <body>
+        
+        <p id="tribute-title">Sir David Attenborough's Most Recent Documentaries</p>
+      
+        <ul>
+          <li>Blue Planet (2001)</li>
+          <li>Planet Earth (2006)</li>
+          <li>Life (2009)</li>
+          <li>Frozen Planet (2011)</li>
+          <li>David Attenborough's Natural Curiousities (2013)</li>
+          <li>A Life on Our Planet (2020)</li>
+        </ul>
+        
+      </body>
+    </div>
+    
+    <footer id="footer">
+      
+      <p>Join Sir David Attenborough in the fight to restore our planet by watching <a id="tribute-link" href="https://attenboroughfilm.com/" target="_blank">A Life on Our Planet</a> and learn how you can take action today.</p>
+      
+    </footer>
+
+  </main>
+
+</html>
